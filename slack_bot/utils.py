@@ -6,6 +6,9 @@ import requests
 
 import config
 
+import logging
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
 
 def build_response(body: Union[Dict, str]):
     """Builds response for Lambda"""
@@ -28,7 +31,7 @@ def get_secrets() -> Dict[str, str]:
     "/secretsmanager/get?secretId=" + \
     config.config.API_KEYS_SECRET_NAME
     
-    print(secrets_extension_endpoint)
+    logging.info(secrets_extension_endpoint)
 
     r = requests.get(secrets_extension_endpoint, headers=headers)
 

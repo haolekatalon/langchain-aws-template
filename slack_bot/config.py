@@ -3,6 +3,10 @@ from dataclasses import dataclass
 
 import boto3
 
+import logging
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+
 SECRETS_EXTENSION_ARNS = {
     "af-south-1": "arn:aws:lambda:af-south-1:317013901791:layer:AWS-Parameters-and-Secrets-Lambda-Extension:4",
     "ap-east-1": "arn:aws:lambda:ap-east-1:768336418462:layer:AWS-Parameters-and-Secrets-Lambda-Extension:4",
@@ -40,10 +44,12 @@ SECRETS_EXTENSION_ARNS = {
 class Config:
     # openai key is expected to be saved in SecretsManager under openai-api-key name
     # slack bot token is expected to be saved in SecretsManager under slack-bot-token
-    API_KEYS_SECRET_NAME = "api-keys"
+    API_KEYS_SECRET_NAME = "slack-bot-secrets"
     
     session = boto3.Session()
     region = session.region_name
+
+    print("Region: ", region)
 
     # Needed for reading secrets from SecretManager
     # See https://docs.aws.amazon.com/systems-manager/latest/userguide/ps-integration-lambda-extensions.html#ps-integration-lambda-extensions-add

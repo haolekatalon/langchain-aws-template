@@ -5,7 +5,7 @@
     "features": {
         "bot_user": {
             "display_name": "slack-bot-app",
-            "always_online": false
+            "always_online": true
         }
     },
     "oauth_config": {
@@ -20,7 +20,7 @@
     },
     "settings": {
         "event_subscriptions": {
-            "request_url": "<api-url>",
+            "request_url": "https://pxl86igqei.execute-api.us-east-1.amazonaws.com/prod/",
             "bot_events": [
                 "message.channels",
                 "message.im",

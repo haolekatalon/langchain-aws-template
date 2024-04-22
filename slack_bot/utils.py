@@ -27,8 +27,13 @@ def get_secrets() -> Dict[str, str]:
     secrets_extension_endpoint = "http://localhost:2773" + \
     "/secretsmanager/get?secretId=" + \
     config.config.API_KEYS_SECRET_NAME
-  
+    
+    print(secrets_extension_endpoint)
+
     r = requests.get(secrets_extension_endpoint, headers=headers)
+
+    logging.info(r.text)
+
     secrets = json.loads(json.loads(r.text)["SecretString"])
 
     return secrets

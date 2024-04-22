@@ -49,8 +49,6 @@ class Config:
     session = boto3.Session()
     region = session.region_name
 
-    print("Region: ", region)
-
     # Needed for reading secrets from SecretManager
     # See https://docs.aws.amazon.com/systems-manager/latest/userguide/ps-integration-lambda-extensions.html#ps-integration-lambda-extensions-add
     SECRETS_EXTENSION_ARN = SECRETS_EXTENSION_ARNS[region]

@@ -2,3 +2,4 @@ requests
 boto3
 slack_sdk
 langchain
+langchain_openai

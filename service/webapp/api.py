@@ -32,7 +32,7 @@ def call(prompt: str, session_id: str):
         "session_id": session_id
     })
     method = "post"
-    url = "<your-api-endpoint>"
+    url = "https://gvoedkk6ng.execute-api.us-east-1.amazonaws.com/prod/"
     r = requests.post(url, headers=signing_headers(method, url, body), data=body)
     response = json.loads(r.text)
     return response

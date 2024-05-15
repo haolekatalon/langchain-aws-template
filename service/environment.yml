@@ -6,7 +6,8 @@ dependencies:
   - pip
   - pip:
     - aws-cdk-lib
-    - langchain==0.0.220
+    - langchain
+    - langchain-openai
     - boto3
     - requests
     - streamlit

@@ -9,7 +9,7 @@ from langchain.prompts import (
     SystemMessagePromptTemplate, 
     HumanMessagePromptTemplate
 )
-from langchain.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain.schema import messages_to_dict
 
 import config

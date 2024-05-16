@@ -65,7 +65,7 @@ class LangChainApp(Stack):
         api.root.add_method(
             "POST", 
             post_integration, 
-            authorization_type=apigateway.AuthorizationType.IAM,
+            authorization_type=None,
             request_models={
                 "application/json": request_model
             },

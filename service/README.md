@@ -9,10 +9,13 @@ This package contains the infrastructure and the code to deploy and run a backen
 Contains the infrastructure code written in CDK that will be deployed to AWS
 
 ### config.py
-Contains the configuration used by the infrastructure and the application code. The current setup expects the API keys to be stored in Secrets Manager under the name `api-keys`. For example, the secrets in the AWS console will look like this:
+Contains the configuration used by the infrastructure and the application code. The current setup expects the API keys to be stored in Secrets Manager under the name `llm-service-secrets`. For example, the secrets in the AWS console will look like this:
 ```json
 {
-    "openai-api-key": "<api-key-value>"
+    "openai-api-key": "<api-key-value>",
+    "pinecone-api-key": "<pinecone-api-key",
+    "pinecone-index": "<pinecone-index>",
+    "pinecone-environment": "<pinecone-environment>"
 }
 ```
 

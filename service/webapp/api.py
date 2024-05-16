@@ -33,6 +33,6 @@ def call(prompt: str, session_id: str):
     })
     method = "post"
     url = "https://gvoedkk6ng.execute-api.us-east-1.amazonaws.com/prod/"
-    r = requests.post(url, headers=signing_headers(method, url, body), data=body)
+    r = requests.post(url, data=body)
     response = json.loads(r.text)
     return response

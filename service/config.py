@@ -6,7 +6,7 @@ import boto3
 @dataclass(frozen=True)
 class Config:
     # openai key is expected to be saved in SecretsManager under openai-api-key name
-    API_KEYS_SECRET_NAME = "api-keys"
+    API_KEYS_SECRET_NAME = "llm-service-secrets"
     
     # Needed for reading secrets from SecretManager
     # See https://docs.aws.amazon.com/systems-manager/latest/userguide/ps-integration-lambda-extensions.html#ps-integration-lambda-extensions-add

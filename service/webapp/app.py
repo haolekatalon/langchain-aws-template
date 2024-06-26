@@ -77,9 +77,6 @@ if clear:
     st.session_state.input = ""
     
 
-
-
-
 def handle_input():
     input = st.session_state.input
     print("Handling input: ", input)
@@ -124,4 +121,4 @@ with st.container():
     write_chat_message(a, q)
 
 st.markdown('---')
-input = st.text_input("You are talking to an AI, ask any question.", key="input", on_change=handle_input)
+input = st.text_input("You are talking to Katalon docs AI, ask any question.", key="input", on_change=handle_input)

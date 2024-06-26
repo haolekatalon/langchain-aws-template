@@ -8,5 +8,5 @@ pip install -I openai -t dist
 
 # remove extraneous bits from installed packages
 rm -r dist/*.dist-info
-cp config.py chain.py main.py dist/
+cp config.py utils.py chain.py main.py dist/
 cd dist && zip -r lambda.zip *
